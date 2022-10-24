@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Create Pet</h1>
+    <form action="/pet_form" method="post">
+        <label for="name">Name:</label>
+        <input name="name" type="text">
+        <br>
+        <label for="species">Species:</label>
+        <input name="species" type="text">
+        <input type="hidden" name="user_id" value="{{user_data.id}}">
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

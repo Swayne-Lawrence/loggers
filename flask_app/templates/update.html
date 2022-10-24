@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Update Pet</h1>
+    <form action="/update_form" method="post">
+        <label for="name">Name:</label>
+        <input name="name" type="text" value="{{pet_db.name}}">
+        <br>
+        <label for="species">Species:</label>
+        <input name="species" type="text" value="{{pet_db.species}}">
+        <input type="hidden" name="user_id" value="{{pet_db.user.id}}">
+        <input type="hidden" name="id" value="{{pet_db.id}}">
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>

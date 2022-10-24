@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>{{user_data.username}}</h1>
+
+    <table>
+        <tr>
+            <th><b>Species</b></th>
+            <th><b>Pet Name</b></th>
+            <th><b>Manage</b></th>
+        </tr>
+        {%for u in user_data.pets%}
+        <tr>
+            <td>{{u.species}}</td>
+            <td>{{u.name}}</td>
+            <td>
+            <a href="/delete/{{u.id}}">delete</a>
+            <a href="/update/{{u.id}}">update</a></td>
+        </tr>
+        {%endfor%}
+
+    </table>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Register</h1>
+
+    <form action="/create_user" method="post">
+        {%with messages=get_flashed_messages()%}
+        {%if messages%}
+        {%for message in messages%}
+        <p>{{message}}</p>
+        {%endfor%}
+        {%endif%}
+        {%endwith%}
+        <label for="username">Username:</label>
+        <input type="text" name="username">
+        <br>
+        <label for="password">Password</label>
+        <input type="password" name="password">
+        <br>
+        <label for="confirm">Confirm Password:</label>
+        <input type="password" name="confirm">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email">
+
+        <button type="submit">Submit</button>
+    </form>
+    <h2>Login</h2>
+    <form action="/log_form" method="post">
+        <label for="username">Username:</label>
+        <input type="text" name="username">
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" name="password">
+        <button type="submit">login</button>
+
+    </form>
+</body>
+</html>
